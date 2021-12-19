@@ -1,0 +1,439 @@
+<!DOCTYPE html>
+<html>
+
+<!--Uros Stankovic-->
+
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Pack & Go</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' type='text/css' media='screen' href='css/commom.css'>
+    <script src='js/offer_preview.js'></script>
+
+
+    
+    <!--Import materialize.css-->
+    <link type="text/css" rel="stylesheet" href="css/materialize-v1.0.0/materialize/css/materialize.min.css"
+        media="screen,projection" />
+    <!-- Compiled and minified JavaScript -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    <link rel="stylesheet" href="css/offer_preview.css">
+    <link rel="stylesheet" href="fontovi.css">
+    <!--Import Google Icon Font-->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+    <script src="js/nouislider.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+    integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w=="
+    crossorigin="anonymous" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/js/all.min.js" integrity="sha512-RXf+QSDCUQs5uwRKaDoXt55jygZZm2V++WUZduaU/Ui/9EGp3f/2KZVahFZBKGH0s774sd3HmrhUy+SgOFQLVQ==" crossorigin="anonymous"></script>
+
+    <!-- wRunner CSS -->
+    <link rel="stylesheet" href="css/wrunner-default-theme.css">
+    <!-- wRunner JS -->
+    <script src="js/wrunner-native.js"></script>
+</head>
+
+<body class="grey lighten-4">
+    <nav>
+        <div class="nav-wrapper  cyan darken-3">
+            <a href="index.html" class="brand-logo ">Pack & Go</a>
+            <ul id="nav-mobile" class="right hide-on-med-and-down">
+                <li><a href="offer_preview.html">Ponude</a></li>
+                <li><a href="contact.html">Kontakt</a></li>
+                <li><a href="compare_offers.html">Uporedi dve ponude</a></li>
+                <li><a href="wish_list.html">Vaša lista želja</a></li>
+                <li><a href="index.html">Odjavi se</a></li>
+            </ul>
+        </div>
+    </nav>
+    <h1 class="center-align">Ponude</h1>
+    <div class="card" id="optionscard" style="padding: 1px 1px 1px 1px;position: absolute;border-radius: 20px;">
+        <div class="row">
+            <div class="input-field col l8" >
+                <input id="searchbar" type="text" class="validate">
+                <label for="searchbar">Pretrazi...</label>
+            </div>
+            <a class="btn waves-effect col l3" style="vertical-align:text-top;margin-top: 24px;"><i class="material-icons center tiny">search</i></a>
+        </div>  
+        <div class="row">
+            <div class="input-field col s12" >
+                <select>
+                    <option value="1" selected>Novije</option>
+                    <option value="1">Starije</option>
+                    <option value="2">Ceni uzlazno</option>
+                    <option value="3">Ceni silazno</option>
+                </select>
+                <label>Sortiraj</label>
+            </div>
+        </div>
+        <div class="row">
+            <div class="input-field col s12" >
+                <select>
+                    <option value="1" selected>More</option>
+                    <option value="1">Planina</option>
+                    <option value="2">Grad</option>
+                    <option value="3">Selo</option>
+                </select>
+                <label>Kategorija</label>
+            </div>
+        </div>
+        <div class="row">
+            <div class="input-field col s12" >
+                <select>
+                    <option value="1" selected>Bez</option>
+                    <option value="1">Autobus</option>
+                    <option value="2">Avion</option>
+                    <option value="3">Brod</option>
+                </select>
+                <label>Prevoz</label>
+            </div>
+        </div>
+        <div class="row">
+            <div class="input-field col s12" >
+                <select>
+                    <option value="1" selected>Nekategorisan</option>
+                    <option value="1">1 zvezdica</option>
+                    <option value="2">2 zvezdice</option>
+                    <option value="3">3 zvezdice</option>
+                    <option value="4">4 zvezdice</option>
+                    <option value="5">5 zvezdice</option>
+                </select>
+                <label>Smestaj</label>
+            </div>
+        </div>
+        <div class="row">
+            <div class="input-field col s12" >
+                <select>
+                    <option value="1" selected>Nebitno</option>
+                    <option value="2">Privatni izdavac</option>
+                    <option value="3">Turisticka agencija</option>
+                </select>
+                <label>Izdavac</label>
+            </div>
+        </div>
+        <div class="row">
+            <p class="cyan-text text-darken-3 center">Cena:</p>
+            <div class="my-js-slider col s12 l12"></div>
+        </div> 
+        <div class="row">
+            <p class="cyan-text text-darken-3 center">Kategorije:</p>
+            <div class="col l12">
+                <label>
+                    <input type="checkbox" class="filled-in"/>
+                    <span>All-inclusive</span>
+                </label>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col l12">
+                <label>
+                    <input type="checkbox" class="filled-in"/>
+                    <span>Dorucak</span>
+                </label>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col l12">
+                <label>
+                    <input type="checkbox" class="filled-in"/>
+                    <span>Rucak</span>
+                </label>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col l12">
+                <label>
+                    <input type="checkbox" class="filled-in"/>
+                    <span>Vecera</span>
+                </label>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col l12">
+                <label>
+                    <input type="checkbox" class="filled-in"/>
+                    <span>Osiguranje</span>
+                </label>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col l12">
+                <label>
+                    <input type="checkbox" class="filled-in"/>
+                    <span>Internet</span>
+                </label>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col l12">
+                <label>
+                    <input type="checkbox" class="filled-in"/>
+                    <span>Klima</span>
+                </label>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col l12">
+                <label>
+                    <input type="checkbox" class="filled-in"/>
+                    <span>Vodic</span>
+                </label>
+            </div>
+        </div>
+        <div class="row">
+            <a class="btn waves-effect col l8 offset-l2">Primeni</a>
+        </div>
+    </div>
+    <div style="display: flex;flex-direction: row;justify-content: space-evenly;" class="cardpanel">
+        <div class="card hoverable">
+            <div class="card-image waves-effect waves-block waves-light">
+                <i class="far fa-heart yellow-text text-darken-3" style="font-size: 200%;position: absolute;top: 5px;right: 5px;" id="heart8" onclick="toggle('heart8')"></i>
+                <a href = "offer.html"><img class="activator responsive-img" src="pictures/prag.jpg"
+                    style="width: 300px;height:300px;object-fit: cover;"></a>
+            </div>
+            <div class="card-content">
+                <span class="card-title activator grey-text text-darken-4">Prag vikend<i
+                        class="material-icons right">more_vert</i></span>
+                <div><i class="material-icons yellow-text text-darken-3">euro</i><a href="#"
+                        class="yellow-text text-darken-3 right">
+                        <p>200</p>
+                    </a></div>
+                <div><i class="material-icons text-darken-3">location_on</i><a href="#" class="black-text  right">
+                        <p>Prag</p>
+                    </a></div>
+                <div><i class="material-icons text-darken-3">date_range</i><a href="#" class=" black-text right">
+                        <p>02/04 - 05/04</p>
+                    </a></div>
+
+            </div>
+            <div class="card-reveal hideScrollBar">
+                <span class="card-title grey-text text-darken-4">Prag vikend<i class="material-icons right">close</i></span>
+                <p>Zvuči jako izazovno turu po Pragu pretvoriti u turu praških pivnica i uživati u vrhunskim češkom pivu, svinjskim kolenicama i kobasicama ali Prag ima još jako puno toga da ponudi.
+
+                    Za posetioce koji imaju samo jedan dan za posetu Pragu neizbežno je videti Praški dvorac, Karlov most i Starogradski trg. Već za tri dana mogu se lepo obići sve glavne atrakcije Praga. </p>
+            </div>
+        </div>
+
+        <div class="card hoverable">
+            <div class="card-image waves-effect waves-block waves-light">
+                <i class="far fa-heart yellow-text text-darken-3" style="font-size: 200%;position: absolute;top: 5px;right: 5px;" id="heart2" onclick="toggle('heart2')"></i>
+                <img class="activator responsive-img" src="pictures/bec.png"
+                    style="width: 300px;height:300px;object-fit: cover;">
+            </div>
+            <div class="card-content">
+                
+                <span class="card-title activator grey-text text-darken-4">Beč 1.maj<i
+                        class="material-icons right">more_vert</i></span>
+                <div><i class="material-icons yellow-text text-darken-3">euro</i><a href="#"
+                        class="yellow-text text-darken-3 right">
+                        <p>199</p>
+                    </a></div>
+                <div><i class="material-icons text-darken-3">location_on</i><a href="#" class="black-text  right">
+                        <p>London</p>
+                    </a></div>
+                <div><i class="material-icons text-darken-3">date_range</i><a href="#" class=" black-text right">
+                        <p>01/05 - 03/05</p>
+                    </a></div>
+
+            </div>
+            <div class="card-reveal hideScrollBar">
+                <span class="card-title grey-text text-darken-4">Beč 1.maj<i class="material-icons right">close</i></span>
+                <p>Zadivljujuća arhitektura i bogata kulturna ponuda nekada carskog grada Beča čine ga jednom od omiljenih turističkih destinacija u svetu. Velika četvorka - Hajdn, Mocart, Betoven i Šubert čini ga gradom muzike. Beč nije samo grad valcera, prelepih dvoraca i bogatih muzejskih kolekcija već i mesto u kome se možete opustiti uz zaher tortu, uživati u pogledu sa velikog panoramskog točka ili posetiti po mnogima najbolji zoološki vrt u Evropi. </p>
+            </div>
+        </div>
+        <div class="card hoverable">
+            <div class="card-image waves-effect waves-block waves-light">
+                <i class="far fa-heart yellow-text text-darken-3" style="font-size: 200%;position: absolute;top: 5px;right: 5px;" id="heart3" onclick="toggle('heart3')"></i>
+                <img class="activator responsive-img" src="pictures/zlatibor2.jpg"
+                    style="width: 300px;height:300px;object-fit: cover;">
+            </div>
+            <div class="card-content">
+                <span class="card-title activator grey-text text-darken-4">Zlatibor 4 dana<i
+                        class="material-icons right">more_vert</i></span>
+                <div><i class="material-icons yellow-text text-darken-3">euro</i><a href="#"
+                        class="yellow-text text-darken-3 right">
+                        <p>180</p>
+                    </a></div>
+                <div><i class="material-icons text-darken-3">location_on</i><a href="#" class="black-text  right">
+                        <p>Zlatibor</p>
+                    </a></div>
+                <div><i class="material-icons text-darken-3">date_range</i><a href="#" class=" black-text right">
+                        <p>20/04 - 25/04</p>
+                    </a></div>
+
+            </div>
+            <div class="card-reveal hideScrollBar">
+                <span class="card-title grey-text text-darken-4">Zlatibor 4 dana<i class="material-icons right">close</i></span>
+                <p>Planina Zlatibor – planina zlatnih borova, blago zaobljenih vrhova i visova, sa najvišim vrhom Tornikom 1496m, nalazi se u jugozapadnom delu Srbije, na oko 200km od Beograda. Prosečna nadmorska visina zlatiborskog područja iznosi oko 1000m i omogućava uživanje gostiju u blagotvornoj klimi i prirodnim lepotama.</p>
+            </div>
+        </div>
+        <div class="card hoverable">
+            <div class="card-image waves-effect waves-block waves-light">
+                <i class="far fa-heart yellow-text text-darken-3" style="font-size: 200%;position: absolute;top: 5px;right: 5px;" id="heart4" onclick="toggle('heart4')"></i>
+                <img class="activator responsive-img" src="pictures/moskva.jpg"
+                    style="width: 300px;height:300px;object-fit: cover;">
+            </div>
+            <div class="card-content">
+                <span class="card-title activator grey-text text-darken-4">Moskva 14.2.<i
+                        class="material-icons right">more_vert</i></span>
+                <div><i class="material-icons yellow-text text-darken-3">euro</i><a href="#"
+                        class="yellow-text text-darken-3 right">
+                        <p>450</p>
+                    </a></div>
+                <div><i class="material-icons text-darken-3">location_on</i><a href="#" class="black-text  right">
+                        <p>Moskva</p>
+                    </a></div>
+                <div><i class="material-icons text-darken-3">date_range</i><a href="#" class=" black-text right">
+                        <p>13/02 - 18/02</p>
+                    </a></div>
+
+            </div>
+            <div class="card-reveal hideScrollBar">
+                <span class="card-title grey-text text-darken-4">Moskva 14.2.<i class="material-icons right">close</i></span>
+                <p>Moskva je specifična. Drugačija od bilo koje druge destinacije za koje se turisti odlučuju kada krenu na put kroz Evropu. Atrakcije i znamenitosti u Moskvi koje treba videti je gotovo ludo nabrajati jer ih ima toliko da je možda čak bolji savet prosto šetati kroz ovaj ogromni grad i uživati. </p>
+            </div>
+        </div>
+
+
+    </div>
+    <div style="display: flex;flex-direction: row;justify-content: space-evenly;" class="cardpanel">
+        <div class="card hoverable">
+            <div class="card-image waves-effect waves-block waves-light">
+                <i class="far fa-heart yellow-text text-darken-3" style="font-size: 200%;position: absolute;top: 5px;right: 5px;" id="heart5" onclick="toggle('heart5')"></i>
+                <img class="activator responsive-img" src="pictures/smestajKop.jpg"
+                    style="width: 300px;height:300px;object-fit: cover;">
+            </div>
+            <div class="card-content">
+                <span class="card-title activator grey-text text-darken-4">Smeštaj Kop<i
+                        class="material-icons right">more_vert</i></span>
+                <div><i class="material-icons yellow-text text-darken-3">euro</i><a href="#"
+                        class="yellow-text text-darken-3 right">
+                        <p>100</p>
+                    </a></div>
+                <div><i class="material-icons text-darken-3">location_on</i><a href="#" class="black-text  right">
+                        <p>Kopaonik</p>
+                    </a></div>
+                <div><i class="material-icons text-darken-3">date_range</i><a href="#" class=" black-text right">
+                        <p>01/04 - 07/04</p>
+                    </a></div>
+
+            </div>
+            <div class="card-reveal hideScrollBar">
+                <span class="card-title grey-text text-darken-4">Smeštaj Kop<i class="material-icons right">close</i></span>
+                <p>Turistički centar Kopaonik aktivan je i van zimske sezone i predstavlja jednu od omiljenih destinacija za rekreaciju i odmor tokom toplijeg perioda godine. Uglavnom se uživa u aktivnostima kao što su šetnja, planinarenje,a u ponudi su i škole tenisa, košarke i jahanja. Brojni tereni vrhunskih kvaliteta dostupni su za sportske pripreme pa se tako i vi možete rekreirati na mestima gde se pripremaju srpski reprezentativci. </p>
+            </div>
+        </div>
+        <div class="card hoverable">
+            <div class="card-image waves-effect waves-block waves-light">
+                <i class="far fa-heart yellow-text text-darken-3" style="font-size: 200%;position: absolute;top: 5px;right: 5px;" id="heart6" onclick="toggle('heart6')"></i>
+                <img class="activator responsive-img" src="pictures/pariz.jpeg"
+                    style="width: 300px;height:300px;object-fit: cover;">
+            </div>
+            <div class="card-content">
+                <span class="card-title activator grey-text text-darken-4">Pariz 7 dana<i
+                        class="material-icons right">more_vert</i></span>
+                <div><i class="material-icons yellow-text text-darken-3">euro</i><a href="#"
+                        class="yellow-text text-darken-3 right">
+                        <p>560</p>
+                    </a></div>
+                <div><i class="material-icons text-darken-3">location_on</i><a href="#" class="black-text  right">
+                        <p>Pariz</p>
+                    </a></div>
+                <div><i class="material-icons text-darken-3">date_range</i><a href="#" class=" black-text right">
+                        <p>05/04 - 12/04</p>
+                    </a></div>
+
+            </div>
+            <div class="card-reveal hideScrollBar">
+                <span class="card-title grey-text text-darken-4">Pariz 7 dana<i class="material-icons right">close</i></span>
+                <p>Kada pomislimo na Pariz u glavi nam se stvara slika jednog od najlepših svetskih gradova, koji se nesumnjivo nalazi na listi želja svakog turiste. Glavni grad Francuske odiše zbilja posebnom energijom u koju se zaljubi apsolutno svako ko barem jednom poseti ovaj Grad svetlosti. </p>
+            </div>
+        </div>
+        <div class="card hoverable">
+            <div class="card-image waves-effect waves-block waves-light">
+                <i class="far fa-heart yellow-text text-darken-3" style="font-size: 200%;position: absolute;top: 5px;right: 5px;" id="heart7" onclick="toggle('heart7')"></i>
+                <img class="activator responsive-img" src="pictures/staraplaninaSmestaj.jpg"
+                    style="width: 300px;height:300px;object-fit: cover;">
+            </div>
+            <div class="card-content">
+                <span class="card-title activator grey-text text-darken-4">Stara planina<i
+                        class="material-icons right">more_vert</i></span>
+                <div><i class="material-icons yellow-text text-darken-3">euro</i><a href="#"
+                        class="yellow-text text-darken-3 right">
+                        <p>90</p>
+                    </a></div>
+                <div><i class="material-icons text-darken-3">location_on</i><a href="#" class="black-text  right">
+                        <p>Stara planina</p>
+                    </a></div>
+                <div><i class="material-icons text-darken-3">date_range</i><a href="#" class=" black-text right">
+                        <p>10/05 - 17/05</p>
+                    </a></div>
+
+            </div>
+            <div class="card-reveal hideScrollBar">
+                <span class="card-title grey-text text-darken-4">Stara planina<i class="material-icons right">close</i></span>
+                <p>Beskonačni krajolici netaknute prirode, prostrani planinski pašnjaci i guste šume bogate plodovima i lekovitim biljem, slikovita sela i zanimljiv folklor – to je slika Stare planine, jednog od najlepših i najautentičnijih prirodnih rezervata Srbije, u kojem se nalazi i najviši planinski vrh ove zemlje, Midžor na 2.169 metara nadmorske visine.</p>
+            </div>
+        </div>
+    
+        <div class="card hoverable">
+            <div class="card-image waves-effect waves-block waves-light">
+                <i class="far fa-heart yellow-text text-darken-3" style="font-size: 200%;position: absolute;top: 5px;right: 5px;" id="heart1" onclick="toggle('heart1')"></i>
+                
+                <a href = "offer.html"><img class="activator responsive-img" src="pictures/london.jpg"
+                    style="width: 300px;height:300px;object-fit: cover;"></a>
+            </div>
+            <div class="card-content">
+                <span class="card-title activator grey-text text-darken-4">London 3 dana<i
+                        class="material-icons right">more_vert</i></span>
+                <div><i class="material-icons yellow-text text-darken-3">euro</i><a href="#"
+                        class="yellow-text text-darken-3 right">
+                        <p>500</p>
+                    </a></div>
+                <div><i class="material-icons text-darken-3">location_on</i><a href="#" class="black-text  right">
+                        <p>London</p>
+                    </a></div>
+                <div><i class="material-icons text-darken-3">date_range</i><a href="#" class=" black-text right">
+                        <p>10/04 - 13/04</p>
+                    </a></div>
+
+            </div>
+            <div class="card-reveal hideScrollBar">
+                <span class="card-title grey-text text-darken-4">London<i class="material-icons right">close</i></span>
+                <p>London je slojevit grad, pun kontrasta. Neprestano se menja, a u isto vreme je konzervativan, pa je
+                    njegovu atmosferu nemoguće preneti. Svako će ga doživeti drugačije. Pa evo jednog pogleda i vizije o
+                    tome kakav je London kroz atrakcije u Londonu i znamenitosti koje se često preskoče. </p>
+            </div>
+        </div>
+
+
+    </div>
+
+    <ul class="pagination center" style = "margin-top: 17%;">
+        <li class="disabled"><a href="#!"><i class="material-icons">chevron_left</i></a></li>
+        <li class="active cyan darken-3"><a href="offer_preview.html">1</a></li>
+        <li class="active yellow darken-3"><a href="offer_preview.html">2</a></li>
+        <li class="active cyan darken-3"><a href="offer_preview.html">3</a></li>
+        <li class="waves-effect"><a href="#!"><i class="material-icons">chevron_right</i></a></li>
+      </ul>
+    
+    <script>
+       document.addEventListener('DOMContentLoaded', function () {
+            var elems = document.querySelectorAll('select');
+           var instances = M.FormSelect.init(elems, {});
+         
+       });
+    </script>
+    <script>
+        var setting = {
+            roots: document.querySelector('.my-js-slider'),
+            type: 'range',
+            step: 1,
+            }
+        var slider = wRunner(setting);
+    </script>
+</body>
+
+</html>

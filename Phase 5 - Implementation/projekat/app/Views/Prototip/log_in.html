@@ -1,0 +1,79 @@
+
+<?php
+$profpic = "pictures/background.jpg";
+?>
+
+<!DOCTYPE html>
+<html lang="en">
+
+<!--Uros Stankovic-->
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+  <!--Import Google Icon Font-->
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <!--Import materialize.css-->
+  <link type="text/css" rel="stylesheet" href="css/materialize-v1.0.0/materialize/css/materialize.min.css"
+    media="screen,projection" />
+  <link href="fontovi.css" rel="stylesheet">
+  <link href="css/style.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+  <!--Let browser know website is optimized for mobile-->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Pack & Go</title>
+  <script src="https://kit.fontawesome.com/063f419900.js" crossorigin="anonymous"></script>
+  <!-- Compiled and minified JavaScript -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+
+  <link rel="stylesheet" href="css/commom.css">
+ </head>
+ <style>
+   input::placeholder {
+     color: white;
+   }
+ </style>
+<body style = "background-color:#d5faff; background-image: url('<?php echo $profpic;?>') ; background-repeat: no-repeat; background-attachment: fixed;background-size: 100%;">
+  <nav>
+        <div class="nav-wrapper  cyan darken-3" >
+          <a href="index.html" class="brand-logo ">Pack & Go</a>
+          <ul id="nav-mobile" class="right hide-on-med-and-down">
+            <li><a href="offer_preview.html">Ponude</a></li>
+            <li><a href="contact.html">Kontakt</a></li>
+            <li><a href="log_in.php.html">Uloguj se</a></li>
+            <li><a href="registration.html">Registracija</a></li>
+          </ul>
+        </div>
+    </nav>
+    <form name="loginform" action="<?= site_url('Guest/loginSubmit') ?>" method="post">
+    <div class="row">
+      <div class="card hideScrollBar hoverable col s10 l4 push-l3 push-s1"
+          style="margin-top: 4%;height: 550px;border-radius: 20px;">
+          <h3 class="card-content" style="text-align: center;">Prijavi se</h3>
+          <div class="row card-content">
+            <div class="input-field col s10 offset-s1">
+              <input id="id2" type="text" data-length="10" name = "userNameInput">
+              <label for="id2">Korisnicko ime</label>
+            </div>
+          </div>
+          <div class="row card-content">
+            <div class="input-field col s10 offset-s1">
+              <input id="id3" type="password" data-length="10" name = "passwordInput">
+              <label for="id3">Lozinka</label>
+            </div>
+          </div>
+          <?php 
+            if (is_set($poruka)) 
+          ?>
+          <div class="row">
+            <a class="waves-effect waves-green btn col l4 offset-l1 s10 offset-s1" href="registration.html">Registruj se</a>
+            <div class="col s12 l1"></div>
+            <a class="btn waves-effect waves-ripple col l4 offset-l1 s10 offset-s1" href = "index.html">Prijavi se</a>
+          </div>
+  
+      </div>
+  </div>
+    </form>
+</body>
+</html>

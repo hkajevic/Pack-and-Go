@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!--Halil Kajevic-->
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+  <!--Import Google Icon Font-->
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <!--Import materialize.css-->
+
+  <link href="fontovi.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+  <link rel="stylesheet" href="css/commom.css">
+  <!--Let browser know website is optimized for mobile-->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Pack & Go</title>
+  <script src="https://kit.fontawesome.com/063f419900.js" crossorigin="anonymous"></script>
+  <style>
+    td,
+    th {
+      text-align: center;
+      align-content: center;
+      font-size: 14pt;
+    }
+
+    .bledoZelena {
+      color: #80deea
+    }
+
+    .tamnoZelena {
+      color: #00acc1
+    }
+
+    .cssButtonPrihvati {
+      margin: 5px;
+      width: 100%;
+      background-color: #00838F;
+      border-radius: 5px;
+    }
+
+    .cssButtonOdbij {
+      margin: 5px;
+      width: 100%;
+      background-color: red;
+      border-radius: 5px;
+    }
+  </style>
+</head>
+
+<body>
+
+  <nav>
+    <div class="nav-wrapper  cyan darken-3">
+      <a href="index.html" class="brand-logo ">Pack & Go</a>
+      <ul id="nav-mobile" class="right hide-on-med-and-down">
+        <li><a href="offer_preview.html">Ponude</a></li>
+        <li><a href="contact.html">Kontakt</a></li>
+        <li><a href="validate_agency.html">Proveri agenciju</a></li>
+        <li><a href="accept_offer.html">Odobri ponudu</a></li>
+        <li><a href="user_remove.html">Obriši korisnika</a></li>
+        <li><a href="index.html">Odjavi se</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <h1 class="center text-cyan darken-3">Odobravanje ponuda</h1>
+
+
+  <div class="container">
+    <br>
+    <p>Naredne ponude je potrebno pregledati, odrediti ispravnost a zatim na osnovu toga prihvatiti ili odbiti ponude
+    </p>
+    <br>
+
+    <hr>
+    <br>
+    <table class="highlight responsive-table">
+      <thead>
+        <tr>
+          <th class="tamnoZelena">Naziv ponude</th>
+          <th class="bledoZelena">Izdavač ponude</th>
+          <th class="tamnoZelena">Opis ponude</th>
+          <th class="bledoZelena">Priložene slike</th>
+          <th class="tamnoZelena">Odobrenje</th>
+        </tr>
+      </thead>
+
+      <tbody>
+        <tr>
+          <td>Letovanje u Turskoj</td>
+          <td><b>Travelland</b><br> PIB 892423556</td>
+          <td>Obilazenje Antalije. Odsedanje u hotelu na Bosforu.</td>
+          <td> <a
+              href="https://images.unsplash.com/photo-1581275341387-dc1445d4f949?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1868&q=80">slika1.jpg</a>
+            <a
+              href="https://images.unsplash.com/photo-1553649084-3e42773ff0e3?ixlib=rb-1.2.1&ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&auto=format&fit=crop&w=334&q=80">slika2.jpg</a>
+            <a
+              href="https://images.unsplash.com/photo-1576433438817-bdf226ef9f87?ixlib=rb-1.2.1&ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&auto=format&fit=crop&w=1868&q=80">slika3.png</a>
+          </td>
+          <td> <a class="waves-effect waves-light btn cssButtonPrihvati"
+              onclick="alert('Uspesno ste prihvatili ponudu');">Prihvati</a>
+            <a class="waves-effect waves-light btn cssButtonOdbij" onclick="alert('Uspesno ste odbacili ponudu');">Odbij
+            </a>
+          </td>
+        </tr>
+        <tr>
+          <td>Planinarenje na Himalajima</td>
+          <td><b>Jovan Petrovic</b><br> JMBG 5625892423556</td>
+          <td>Petodnveno planinarenje uz obezbedjenog vodica. Odsedanje u satorima tokom noci.</td>
+          <td> <a
+              href="https://images.unsplash.com/photo-1581275341387-dc1445d4f949?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1868&q=80">slika1.jpg</a>
+            <a
+              href="https://images.unsplash.com/photo-1553649084-3e42773ff0e3?ixlib=rb-1.2.1&ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&auto=format&fit=crop&w=334&q=80">slika2.jpg</a>
+            <a
+              href="https://images.unsplash.com/photo-1576433438817-bdf226ef9f87?ixlib=rb-1.2.1&ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&auto=format&fit=crop&w=1868&q=80">slika3.png</a>
+          </td>
+          </td>
+          <td> <a class="waves-effect waves-light btn cssButtonPrihvati">Prihvati</a>
+            <a class="waves-effect waves-light btn cssButtonOdbij">Odbij</a>
+          </td>
+
+        </tr>
+        <tr>
+          <td>Skijanje na Zlatiboru</td>
+          <td><b>Viva Travel Agency</b><br> PIB 984275731</td>
+          <td>Ako ste zeljni uzbudljivog provoda na kristalno belom snegu uz obezbedjen smestaj i hranu, uz dodatni spa
+            tretman poseta Zlatiboru je neizbezna</td>
+          <td> <a
+              href="https://images.unsplash.com/photo-1581275341387-dc1445d4f949?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1868&q=80">slika1.jpg</a>
+            <a
+              href="https://images.unsplash.com/photo-1553649084-3e42773ff0e3?ixlib=rb-1.2.1&ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&auto=format&fit=crop&w=334&q=80">slika2.jpg</a>
+            <a
+              href="https://images.unsplash.com/photo-1576433438817-bdf226ef9f87?ixlib=rb-1.2.1&ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&auto=format&fit=crop&w=1868&q=80">slika3.png</a>
+          </td>
+          </td>
+          <td> <a class="waves-effect waves-light btn cssButtonPrihvati">Prihvati</a>
+            <a class="waves-effect waves-light btn cssButtonOdbij"
+              onclick="alert('Uspesno ste odbacili ponudu');">Odbij</a>
+          </td>
+        </tr>
+        <tr>
+          <td>Letovanje na Kipru</td>
+          <td><b>YUTA</b><br> PIB 639275484</td>
+          <td>Cari toplih morskih struja, prelep pogled na zalazak sunca i vreo pesak pomoci ce vam da se osecate kao u
+            raju</td>
+          <td> <a
+              href="https://images.unsplash.com/photo-1581275341387-dc1445d4f949?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1868&q=80">slika1.jpg</a>
+            <a
+              href="https://images.unsplash.com/photo-1553649084-3e42773ff0e3?ixlib=rb-1.2.1&ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&auto=format&fit=crop&w=334&q=80">slika2.jpg</a>
+            <a
+              href="https://images.unsplash.com/photo-1576433438817-bdf226ef9f87?ixlib=rb-1.2.1&ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&auto=format&fit=crop&w=1868&q=80">slika3.png</a>
+          </td>
+          </td>
+          <td> <a class="waves-effect waves-light btn cssButtonPrihvati"
+              onclick="alert('Uspesno ste prihvatili ponudu');">Prihvati</a>
+            <a class="waves-effect waves-light btn cssButtonOdbij"
+              onclick="alert('Uspesno ste odbacili ponudu');">Odbij</a>
+          </td>
+        </tr>
+        <tr>
+          <td>Krstarenje na Maldivima</td>
+          <td><b>Filip Travel</b><br> PIB 673775291</td>
+          <td>Ako ste ljubitelj plavetnila mora koje se ogleda u kristalno cistom moru uz savrsenu ponudu hrane ova
+            ponuda je za vas</td>
+          <td> <a
+              href="https://images.unsplash.com/photo-1581275341387-dc1445d4f949?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1868&q=80">slika1.jpg</a>
+            <a
+              href="https://images.unsplash.com/photo-1553649084-3e42773ff0e3?ixlib=rb-1.2.1&ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&auto=format&fit=crop&w=334&q=80">slika2.jpg</a>
+            <a
+              href="https://images.unsplash.com/photo-1576433438817-bdf226ef9f87?ixlib=rb-1.2.1&ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&auto=format&fit=crop&w=1868&q=80">slika3.png</a>
+          </td>
+          </td>
+          <td> <a class="waves-effect waves-light btn cssButtonPrihvati"
+              onclick="alert('Uspesno ste prihvatili ponudu');">Prihvati</a>
+            <a class="waves-effect waves-light btn cssButtonOdbij"
+              onclick="alert('Uspesno ste odbacili ponudu');">Odbij</a>
+          </td>
+        </tr>
+        <tr>
+          <td>Izlet na Zlataru</td>
+          <td><b>Travelland</b><br> PIB 892423556</td>
+          <td>Cist vazduh i priroda koja ostavlja bez daha uz tradicionalne domace obroke</td>
+          <td> <a
+              href="https://images.unsplash.com/photo-1581275341387-dc1445d4f949?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1868&q=80">slika1.jpg</a>
+            <a
+              href="https://images.unsplash.com/photo-1553649084-3e42773ff0e3?ixlib=rb-1.2.1&ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&auto=format&fit=crop&w=334&q=80">slika2.jpg</a>
+            <a
+              href="https://images.unsplash.com/photo-1576433438817-bdf226ef9f87?ixlib=rb-1.2.1&ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&auto=format&fit=crop&w=1868&q=80">slika3.png</a>
+          </td>
+          </td>
+          <td> <a class="waves-effect waves-light btn cssButtonPrihvati"
+              onclick="alert('Uspesno ste prihvatili ponudu');">Prihvati</a>
+            <a class="waves-effect waves-light btn cssButtonOdbij"
+              onclick="alert('Uspesno ste odbacili ponudu');">Odbij</a>
+          </td>
+        </tr>
+        <tr>
+          <td>Letovanje u Budvi</td>
+          <td><b>Travelland</b><br> PIB 892423556</td>
+          <td>Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident, beatae officia! Porro repudiandae
+            tempore eius illo provident, incidunt quam, reiciendis facere cum hic debitis accusantium autem corrupti
+            sequi eaque quod!</td>
+          <td> <a
+              href="https://images.unsplash.com/photo-1581275341387-dc1445d4f949?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1868&q=80">slika1.jpg</a>
+            <a
+              href="https://images.unsplash.com/photo-1553649084-3e42773ff0e3?ixlib=rb-1.2.1&ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&auto=format&fit=crop&w=334&q=80">slika2.jpg</a>
+            <a
+              href="https://images.unsplash.com/photo-1576433438817-bdf226ef9f87?ixlib=rb-1.2.1&ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&auto=format&fit=crop&w=1868&q=80">slika3.png</a>
+          </td>
+          </td>
+          <td> <a class="waves-effect waves-light btn cssButtonPrihvati"
+              onclick="alert('Uspesno ste prihvatili ponudu');">Prihvati</a>
+            <a class="waves-effect waves-light btn cssButtonOdbij"
+              onclick="alert('Uspesno ste odbacili ponudu');">Odbij</a>
+          </td>
+        </tr>
+        <tr>
+          <td>Zimovanje u Svajcarskoj</td>
+          <td><b>Travelland</b><br> PIB 892423556</td>
+          <td>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quaerat, hic. Molestiae, aperiam! Suscipit sint
+            laudantium iure perferendis animi ratione necessitatibus voluptatem. Incidunt deleniti doloremque nisi, odit
+            inventore ipsam repudiandae architecto?</td>
+          <td> <a
+              href="https://images.unsplash.com/photo-1581275341387-dc1445d4f949?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1868&q=80">slika1.jpg</a>
+            <a
+              href="https://images.unsplash.com/photo-1553649084-3e42773ff0e3?ixlib=rb-1.2.1&ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&auto=format&fit=crop&w=334&q=80">slika2.jpg</a>
+            <a
+              href="https://images.unsplash.com/photo-1576433438817-bdf226ef9f87?ixlib=rb-1.2.1&ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&auto=format&fit=crop&w=1868&q=80">slika3.png</a>
+          </td>
+          </td>
+          <td> <a class="waves-effect waves-light btn cssButtonPrihvati"
+              onclick="alert('Uspesno ste prihvatili ponudu');">Prihvati</a>
+            <a class="waves-effect waves-light btn cssButtonOdbij"
+              onclick="alert('Uspesno ste odbacili ponudu');">Odbij</a>
+          </td>
+        </tr>
+        <tr>
+          <td>Letovanje u Parizu</td>
+          <td><b>Travelland</b><br> PIB 892423556</td>
+          <td>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Sit vel aliquid nulla tenetur, alias a modi
+            placeat unde explicabo fugit! Molestias eum laboriosam enim assumenda consequuntur. Odio deserunt saepe
+            ullam.</td>
+          <td> <a
+              href="https://images.unsplash.com/photo-1581275341387-dc1445d4f949?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1868&q=80">slika1.jpg</a>
+            <a
+              href="https://images.unsplash.com/photo-1553649084-3e42773ff0e3?ixlib=rb-1.2.1&ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&auto=format&fit=crop&w=334&q=80">slika2.jpg</a>
+            <a
+              href="https://images.unsplash.com/photo-1576433438817-bdf226ef9f87?ixlib=rb-1.2.1&ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&auto=format&fit=crop&w=1868&q=80">slika3.png</a>
+          </td>
+          </td>
+          <td> <a class="waves-effect waves-light btn cssButtonPrihvati"
+              onclick="alert('Uspesno ste prihvatili ponudu');">Prihvati</a>
+            <a class="waves-effect waves-light btn cssButtonOdbij"
+              onclick="alert('Uspesno ste odbacili ponudu');">Odbij</a>
+          </td>
+        </tr>
+        <tr>
+          <td>Krstarenje obalama Mediterana</td>
+          <td><b>Travelland</b><br> PIB 892423556</td>
+          <td>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Corporis ducimus perferendis minus quos ab? Quia
+            at obcaecati, autem excepturi maxime voluptates, dolorum reiciendis reprehenderit, explicabo est illo
+            repellendus. Rem, quae.</td>
+          <td> <a
+              href="https://images.unsplash.com/photo-1581275341387-dc1445d4f949?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1868&q=80">slika1.jpg</a>
+            <a
+              href="https://images.unsplash.com/photo-1553649084-3e42773ff0e3?ixlib=rb-1.2.1&ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&auto=format&fit=crop&w=334&q=80">slika2.jpg</a>
+            <a
+              href="https://images.unsplash.com/photo-1576433438817-bdf226ef9f87?ixlib=rb-1.2.1&ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&auto=format&fit=crop&w=1868&q=80">slika3.png</a>
+          </td>
+          </td>
+          <td> <a class="waves-effect waves-light btn cssButtonPrihvati"
+              onclick="alert('Uspesno ste prihvatili ponudu');">Prihvati</a>
+            <a class="waves-effect waves-light btn cssButtonOdbij"
+              onclick="alert('Uspesno ste odbacili ponudu');">Odbij</a>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</body>
+
+</html>

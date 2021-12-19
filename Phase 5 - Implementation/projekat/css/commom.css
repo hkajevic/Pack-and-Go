@@ -1,0 +1,28 @@
+.brand-logo {
+    margin-left: 2%;
+}
+
+.hideScrollBar::-webkit-scrollbar {
+    display: none;
+  }
+
+.hideScrollBar {
+    -ms-overflow-style: none;
+    scrollbar-width: 0;
+}
+
+.justify {
+    text-align: justify;
+}
+
+@media screen and (min-width: 992px) {
+    .justify-large {
+        text-align: justify;
+    }
+}
+
+@media screen and (max-width: 992px) {
+    .center-non-large {
+        text-align: center;
+    }
+}
